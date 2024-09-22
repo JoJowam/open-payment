@@ -1,0 +1,64 @@
+# Continuous Integration Workflow
+# Este workflow está sendo preparado para realizar a integração contínua em diferentes sistemas operacionais.
+
+name: Continuous Integration
+
+on: 
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  # Job de Build e Teste para Ubuntu
+  build-and-test-ubuntu:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout do código fonte
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Configuração do Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22.x'
+
+      # TODO: Cache dos node_modules (placeholder, ainda não usado)
+      - name: Cache Node Modules (placeholder)
+        run: echo "Placeholder for caching Node Modules. No real cache implemented yet."
+
+      # TODO: Placeholder para instalação das dependências
+      - name: Install Dependencies (placeholder)
+        run: echo "Placeholder for installing dependencies. No real installation yet."
+
+      # TODO: Placeholder para execução dos testes
+      - name: Run Tests (placeholder)
+        run: echo "Placeholder for running tests. No real tests executed yet."
+
+  # Job de Build e Teste para Windows
+  build-and-test-windows:
+    runs-on: windows-latest
+
+    steps:
+      # Checkout do código fonte
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Configuração do Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22.x'
+
+      # TODO: Cache dos node_modules (placeholder, ainda não usado)
+      - name: Cache Node Modules (placeholder)
+        run: echo "Placeholder for caching Node Modules. No real cache implemented yet."
+
+      # TODO: Placeholder para instalação das dependências
+      - name: Install Dependencies (placeholder)
+        run: echo "Placeholder for installing dependencies. No real installation yet."
+
+      # TODO: Placeholder para execução dos testes
+      - name: Run Tests (placeholder)
+        run: echo "Placeholder for running tests. No real tests executed yet."
